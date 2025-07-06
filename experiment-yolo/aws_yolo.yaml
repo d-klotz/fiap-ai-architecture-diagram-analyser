@@ -1,0 +1,8 @@
+names:
+  0: Amazon DynamoDB
+  1: Amazon Aurora
+  2: Amazon RDS on VMware
+nc: 3
+path: ./aws_yolo
+train: train.csv
+val: test.csv

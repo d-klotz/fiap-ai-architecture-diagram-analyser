@@ -1,0 +1,26 @@
+{
+  "Amazon Aurora": {
+    "Spoofing": "Credenciais vazadas ou autenticação fraca. Contramedida: IAM Database Authentication + Secrets Manager",
+    "Tampering": "Injeção SQL ou modificação não autorizada de dados. Contramedida: Encryption (at rest/in transit) + Database Activity Monitoring",
+    "Repudiation": "Falta de logs de operações sensíveis. Contramedida: Habilitar Aurora Audit Logs + CloudTrail",
+    "Information Disclosure": "Dados expostos por queries maliciosas. Contramedida: Row-Level Security + VPC Endpoints",
+    "Denial of Service": "Ataques de sobrecarga (ex.: queries complexas). Contramedida: Query Optimization + ProxySQL para rate limiting",
+    "Elevation of Privilege": "Privilégios excessivos em usuários do DB. Contramedida: Minimal Privilege + Regular User Reviews"
+  },
+  "Amazon ElastiCache": {
+    "Spoofing": "Acesso não autorizado ao Redis/Memcached. Contramedida: Redis AUTH + Security Groups restritivas",
+    "Tampering": "Dados alterados no cache. Contramedida: Encryption in transit (TLS) + Redis CLIMMODIFY restriction",
+    "Repudiation": "Falta de logs de acesso. Contramedida: ElastiCache Events + CloudTrail",
+    "Information Disclosure": "Cache expondo dados sensíveis. Contramedida: Data Masking + VPC Isolation",
+    "Denial of Service": "Ataques de exaustão de memória. Contramedida: Maxmemory Policies + Auto Scaling",
+    "Elevation of Privilege": "Exploração de comandos perigosos (ex.: FLUSHALL). Contramedida: Disable高危 Commands + IAM Controls"
+  },
+  "Amazon RDS on VMware": {
+    "Spoofing": "Autenticação fraca entre on-premises e AWS. Contramedida: Certificados TLS + Integração com Active Directory",
+    "Tampering": "Modificação não autorizada de snapshots. Contramedida: Encryption + VMware Snapshot Policies",
+    "Repudiation": "Falta de logs de sincronização. Contramedida: VMware Logs + RDS Log Exports",
+    "Information Disclosure": "Dados replicados para ambientes não seguros. Contramedida: Network Segmentation + Data Masking",
+    "Denial of Service": "Latência na replicação VMware→AWS. Contramedida: Bandwidth Monitoring + QoS Config",
+    "Elevation of Privilege": "Privilégios excessivos no vCenter. Contramedida: VMware Role-Based Access Control"
+  }
+}

@@ -1,0 +1,7 @@
+path: ./dataset
+train: processed_icons/
+val: processed_icons/  # (simplificado - usamos os mesmos dados para validação)
+names:
+  0: Amazon Aurora
+  1: Amazon DynamoDB
+  2: Amazon RDS on VMware
